@@ -1,0 +1,181 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+html,body,div,canvas { margin: 0; padding: 0; }
+html, body { width: 100%; height: 100%; font-family: 'Tillana', sans-serif; }
+.template-wrap { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+.template-wrap canvas { margin: 0 0 10px 0; position: relative; z-index: 9; box-shadow: 0 10px 30px rgba(0,0,0,0.2); -moz-box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+
+body {
+  /*background-color: #222;*/
+  background-image: url("../TemplateData/background.png");
+  background-repeat: repeat;
+  color: white;
+}
+
+a {
+  color: #4FD3BC;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #88BCDA;
+}
+
+nav {
+  margin: 0px 20px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0px;
+}
+
+nav ul li {
+  display: inline;
+  margin-left: 20px;
+  font-size: 2.5em;
+}
+
+nav ul li.right {
+  float: right;
+}
+
+nav ul li img {
+  max-height: 50px;
+  height: 50px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0.4em;
+    text-align: center;
+    width: 100%;
+    font-size: 1.5em;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* ~-* Sharing *-~ */
+
+  .share {
+    text-align: center;
+  }
+  .share h4 {
+    margin: 0;
+  }
+  .share a .google,
+  .share a .reddit {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    background-color: #DC4E41;
+  }
+  .share a .google svg,
+  .share a .reddit svg {
+    width: 24px;
+  }
+  .share a .reddit {
+    background-color: #EF7E00;
+  }
+  .share a svg {
+    width: 48px;
+    height: 48px;
+  }
+
+/* ~-* ./Sharing *-~ */
+
+#loading-box {
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    top: calc(50% - 150px);
+    margin-top: -10px;
+    text-align: center;
+}
+
+#info {
+    color: #eee;
+    letter-spacing: 1px;
+    position: absolute;
+    width: 100%;
+    /*font-family: "Monaco", sans-serif;*/
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+#loader {
+  color: #eee;
+  font-size: 90px;
+  text-indent: -9999em;
+  overflow: hidden;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  margin: 72px auto;
+  position: relative;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load6 1.7s infinite ease;
+  animation: load6 1.7s infinite ease;
+}
+@-webkit-keyframes load6 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  5%,
+  95% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  10%,
+  59% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+  }
+  20% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+  }
+  38% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+}
+@keyframes load6 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  5%,
+  95% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  10%,
+  59% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+  }
+  20% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+  }
+  38% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+}
